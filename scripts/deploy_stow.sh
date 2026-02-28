@@ -9,7 +9,7 @@ SYSTEM_CONFIG_BASE="$HOME/.config"
 mkdir -p "$REPO_CONFIG_BASE"
 
 # Lista de apps a sincronizar
-APPS=("kitty")
+APPS=("kitty" "fastfetch" "btop" "niri" "gtk-3.0" "gtk-4.0")
 
 echo "🛠️  Sincronizando la Kaze..."
 
