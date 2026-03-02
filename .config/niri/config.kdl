@@ -11,7 +11,11 @@ prefer-no-csd
 
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
-//spawn-at-startup "waybar"
+spawn-at-startup "waybar"
+spawn-at-startup "nm-applet" "--indicator"
+spawn-at-startup "blueman-applet"
+spawn-at-startup "swaync"
+spawn-at-startup "swayidle" "-w" "timeout" "300" "swaylock -f -c 000000"
 
 //===================================
 //=           INPUT                 =
@@ -20,8 +24,7 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 input {
     keyboard {
         xkb {
-            layout "es"
-            variant "latam"
+            layout "latam"
         }
         repeat-delay 250
         repeat-rate 50
@@ -33,8 +36,7 @@ input {
         tap-button-map "left-right-middle"
         natural-scroll
         dwt
-        accel-profile "flat"
-        //accel-speed 0.2
+        accel-speed 0.1
     }
 
     mouse {
@@ -159,7 +161,7 @@ binds {
     Mod+T { spawn "kitty"; }
     Mod+D { spawn "fuzzel"; }
     Mod+E { spawn "dolphin"; }
-    Mod+B { spawn "brave"; }
+    Mod+B { spawn "brave-browser"; }
     Super+Alt+L { spawn "swaylock"; }
 
     // Audio (Vivobook)
