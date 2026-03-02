@@ -9,7 +9,23 @@ SYSTEM_CONFIG_BASE="$HOME/.config"
 mkdir -p "$REPO_CONFIG_BASE"
 
 # Lista de apps a sincronizar
-APPS=("kitty" "fastfetch" "btop" "niri" "gtk-3.0" "gtk-4.0" "waybar" "swaync" "swaybg" "zsh" "nvim" "fuzzel")
+APPS=(
+    "kitty"
+    "fastfetch"
+    "btop"
+    "niri"
+    "gtk-3.0"
+    "gtk-4.0"
+    "waybar"
+    "swaync"
+    "zsh"
+    "nvim"
+    "fuzzel"
+    "swaylock"
+    "swayidle"
+    "wlsunset"
+    "nwg-look"
+)
 
 echo "🛠️  Sincronizando la Kaze..."
 
