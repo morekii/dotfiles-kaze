@@ -14,8 +14,19 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 spawn-at-startup "waybar"
 spawn-at-startup "nm-applet" "--indicator"
 spawn-at-startup "blueman-applet"
+spawn-at-startup "dbus-update-activation-environment" "--all"
 spawn-at-startup "swaync"
-spawn-at-startup "swayidle" "-w" "timeout" "300" "swaylock -f -c 000000"
+spawn-at-startup "swayidle" "-w" "timeout" "300" "swaylock -f -c 000000" "timeout" "310" "niri msg action power-off-monitors"
+spawn-at-startup "swaybg" "-m" "fill" "-i" "/home/moreki/Pictures/Wallpapers/wp14678235.jpg"
+
+environment {
+    XDG_CURRENT_DESKTOP "niri"
+    XDG_SESSION_TYPE "wayland"
+    GTK_USE_PORTAL "1"
+    XCURSOR_THEME "Adwaita"
+    XCURSOR_SIZE "16"
+    GDK_BACKEND "wayland"
+}
 
 //===================================
 //=           INPUT                 =
@@ -165,8 +176,8 @@ binds {
     Super+Alt+L { spawn "swaylock"; }
 
     // Audio (Vivobook)
-    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"; }
-    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
+    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+ -l 1.0"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-"; }
     XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
     XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
 

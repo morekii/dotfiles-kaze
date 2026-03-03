@@ -1,0 +1,41 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    border: none;
+    border-radius: 0;
+}
+
+window#waybar {
+    background-color: rgba(26, 27, 38, 0.85); /* Un tono oscuro tipo Tokyo Night */
+    color: #ffffff;
+    transition-property: background-color;
+    transition-duration: .5s;
+    border-bottom: 2px solid rgba(122, 162, 247, 0.5);
+}
+
+#workspaces button {
+    padding: 0 5px;
+    color: #565f89;
+}
+
+#workspaces button.active {
+    color: #7aa2f7;
+}
+
+#clock, #battery, #network, #pulseaudio, #custom-notification {
+    padding: 0 10px;
+    color: #a9b1d6;
+}
+
+#battery.critical {
+    color: #f7768e;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    to { color: #ffffff; }
+}
