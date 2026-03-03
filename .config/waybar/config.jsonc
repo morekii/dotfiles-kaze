@@ -16,6 +16,7 @@
     },
 
     "clock": {
+        "timezone": "America/Argentina/Buenos_Aires",
         "format": "  {:%H:%M}",
         "format-alt": "󰃭  {:%A, %d de %B}",
         "tooltip-format": "<tt><small>{calendar}</small></tt>"
