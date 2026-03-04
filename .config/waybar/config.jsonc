@@ -31,7 +31,8 @@
     "network": {
         "format-wifi": "  {essid}",
         "format-ethernet": "󰈀  {ifname}",
-        "format-disconnected": "⚠ Desconectado"
+        "format-disconnected": "⚠ Desconectado",
+        "on-click": "nm-connection-editor"
     },
 
     "pulseaudio": {

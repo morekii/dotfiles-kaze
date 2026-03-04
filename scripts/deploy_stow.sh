@@ -21,10 +21,10 @@ APPS=(
     "zsh"
     "nvim"
     "fuzzel"
-    "swaylock"
     "swayidle"
     "wlsunset"
     "nwg-look"
+    "hypr"
 )
 
 echo "🛠️  Sincronizando la Kaze..."
