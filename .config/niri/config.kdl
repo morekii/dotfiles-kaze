@@ -16,8 +16,12 @@ spawn-at-startup "nm-applet" "--indicator"
 spawn-at-startup "blueman-applet"
 spawn-at-startup "dbus-update-activation-environment" "--all"
 spawn-at-startup "swaync"
-spawn-at-startup "swayidle" "-w" "timeout" "300" "hyprlock -f -c 000000" "timeout" "310" "niri msg action power-off-monitors"
-spawn-at-startup "swaybg" "-m" "fill" "-i" "/home/moreki/Pictures/Wallpapers/wp14678235.jpg"
+spawn-at-startup "swaybg" "-m" "fill" "-i" "/home/moreki/Pictures/Wallpapers/Anime/wallhaven-1q19l1.png"
+spawn-at-startup "swayidle" "-w" \
+    "timeout" "300" "hyprlock" \
+    "timeout" "310" "niri msg action power-off-monitors" \
+    "resume" "niri msg action power-on-monitors" \
+    "before-sleep" "hyprlock"
 
 environment {
     XDG_CURRENT_DESKTOP "niri"
@@ -156,6 +160,12 @@ window-rule {
     match app-id="kitty"
     draw-border-with-background false
     opacity 1.0
+}
+
+window-rule {
+    match app-id="code"
+    opacity 0.95
+    open-maximized true
 }
 
 //Browser
