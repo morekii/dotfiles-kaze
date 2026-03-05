@@ -207,7 +207,7 @@ binds {
     Mod+Shift+P { power-off-monitors; }
 
     // Apps
-    Mod+E { spawn "kitty"; }
+    Mod+Q { spawn "kitty"; }
     Mod+Space { spawn "fuzzel"; }
     Mod+D { spawn "dolphin"; }
     Mod+B { spawn "brave-browser"; }
@@ -217,7 +217,7 @@ binds {
 
     // Navegación y Ventanas
     Mod+Tab repeat=false { toggle-overview; }
-    Mod+Q repeat=false { close-window; }
+    Mod+T repeat=false { close-window; }
 
     Mod+Left  { focus-column-left; }
     Mod+Right { focus-column-right; }
