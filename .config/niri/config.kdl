@@ -104,8 +104,13 @@ layout {
         off
     }
 
+
     border {
 	off
+
+    width 1
+    active-color "#ffffffcc"
+    inactive-color "#ffffffcc"    
     }
     
     shadow {
@@ -138,9 +143,14 @@ animations {
 }
 
 
+
 //===================================
 //=           WINDOW RULES          =
 //===================================
+layer-rule {
+    match namespace="^wallpaper$"
+    place-within-backdrop true
+}
 
 //Env elements
 layer-rule {
@@ -158,8 +168,12 @@ window-rule {
 
 window-rule {
     match app-id="kitty"
-    draw-border-with-background false
+    open-floating true
+    default-window-height { fixed 600; }
+    default-column-width { fixed 1000; }
     opacity 1.0
+    draw-border-with-background false
+    border {on;}
 }
 
 window-rule {
@@ -172,6 +186,13 @@ window-rule {
 window-rule {
     match app-id="brave-browser" 
     open-maximized true
+}
+
+window-rule {
+    match app-id="mpv"
+    open-floating true
+    default-column-width { fixed 1000; }
+    default-window-height { fixed 600; }
 }
 
 //===================================
@@ -199,8 +220,6 @@ binds {
     Mod+Q repeat=false { close-window; }
 
     Mod+Left  { focus-column-left; }
-    Mod+Down  { focus-window-down; }
-    Mod+Up    { focus-window-up; }
     Mod+Right { focus-column-right; }
     Mod+J     { focus-column-left; }
     Mod+K     { focus-window-down; }
@@ -208,8 +227,8 @@ binds {
     Mod+L     { focus-column-right; }
 
     Mod+Ctrl+Left  { move-column-left; }
-    Mod+Ctrl+Down  { move-window-down; }
-    Mod+Ctrl+Up    { move-window-up; }
+    Mod+Ctrl+Page_Down  { move-window-down; }
+    Mod+Ctrl+Page_Up    { move-window-up; }
     Mod+Ctrl+Right { move-column-right; }
     Mod+Ctrl+J     { move-column-left; }
     Mod+Ctrl+K     { move-window-down; }
@@ -221,12 +240,12 @@ binds {
     Mod+Ctrl+Home { move-column-to-first; }
     Mod+Ctrl+End  { move-column-to-last; }
 
-    Mod+Page_Down      { focus-workspace-down; }
-    Mod+Page_Up        { focus-workspace-up; }
+    Mod+Down     { focus-workspace-down; }
+    Mod+Up        { focus-workspace-up; }
     Mod+O              { focus-workspace-down; }
     Mod+P              { focus-workspace-up; }
-    Mod+Ctrl+Page_Down { move-column-to-workspace-down; }
-    Mod+Ctrl+Page_Up   { move-column-to-workspace-up; }
+    Mod+Ctrl+Down { move-column-to-workspace-down; }
+    Mod+Ctrl+Up   { move-column-to-workspace-up; }
     Mod+Ctrl+O         { move-column-to-workspace-down; }
     Mod+Ctrl+P         { move-column-to-workspace-up; }
 
@@ -297,6 +316,4 @@ binds {
     XF86AudioStop  allow-when-locked=true { spawn-sh "playerctl stop"; }
     XF86AudioPrev  allow-when-locked=true { spawn-sh "playerctl previous"; }
     XF86AudioNext  allow-when-locked=true { spawn-sh "playerctl next"; }
-
-
 }

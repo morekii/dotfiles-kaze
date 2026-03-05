@@ -127,3 +127,14 @@ alias teams='/opt/brave.com/brave/brave-browser --profile-directory=Default --ap
 
 export OLLAMA_HOST=100.72.89.84:11434
 export PATH="$HOME/dotfiles/scripts:$PATH"
+
+export ANI_CLI_NO_DETACH=1   
+
+# Función para limpiar TODO (incluyendo fantasmas de video)
+#fix-terminal() {
+    # Borra imágenes de Kitty, limpia texto y resetea el cursor
+#    printf "\033_Gi=a,d=A;\033\\"; clear; tput cnorm
+#}
+
+# Usalo cuando se te trabe el menú de ani-cli
+alias ani='ani-cli'
