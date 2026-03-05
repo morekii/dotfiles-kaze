@@ -213,11 +213,11 @@ binds {
     Mod+B { spawn "brave-browser"; }
     Mod+N { spawn "code"; }
 
-    Super+Alt+L { spawn "hyprlock"; }
+    Super+Alt+L { spawn "sh" "-c" "hyprlock & sleep 10 && niri msg action power-off-monitors"; }
 
     // Navegación y Ventanas
     Mod+Tab repeat=false { toggle-overview; }
-    Mod+T repeat=false { close-window; }
+    Mod+E repeat=false { close-window; }
 
     Mod+Left  { focus-column-left; }
     Mod+Right { focus-column-right; }
