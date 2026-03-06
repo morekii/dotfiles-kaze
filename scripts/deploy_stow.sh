@@ -25,6 +25,7 @@ APPS=(
     "nwg-look"
     "hypr"
     "tmux"
+    "VSCodium"
 )
 
 echo "🛠️  Sincronizando Kaze desde dotfiles..."

@@ -126,9 +126,8 @@ bindkey '^L' clear-and-fetch
 alias teams='/opt/brave.com/brave/brave-browser --profile-directory=Default --app-id=cifhbcnohmdccbgoicgdjpfamggdegmo'
 
 export OLLAMA_HOST=100.72.89.84:11434
-export PATH="$HOME/dotfiles/scripts:$PATH"
+export PATH="$HOME/dotfiles/.config:$PATH"
 
-export ANI_CLI_NO_DETACH=1   
 
 # Función para limpiar TODO (incluyendo fantasmas de video)
 #fix-terminal() {
@@ -138,3 +137,4 @@ export ANI_CLI_NO_DETACH=1
 
 # Usalo cuando se te trabe el menú de ani-cli
 alias ani='ani-cli'
+alias code='codium'

@@ -177,12 +177,6 @@ window-rule {
 }
 
 window-rule {
-    match app-id="code"
-    opacity 0.95
-    open-maximized true
-}
-
-window-rule {
     match app-id="codium"
     opacity 0.95
     open-maximized true
@@ -222,7 +216,7 @@ binds {
     Mod+Space { spawn "fuzzel"; }
     Mod+D { spawn "dolphin"; }
     Mod+B { spawn "brave-browser"; }
-    Mod+N { spawn "code"; }
+    Mod+N { spawn "VSCodium"; }
 
     Super+Alt+L { spawn "sh" "-c" "hyprlock & sleep 10 && niri msg action power-off-monitors"; }
 
