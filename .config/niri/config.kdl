@@ -182,6 +182,17 @@ window-rule {
     open-maximized true
 }
 
+window-rule {
+    match app-id="codium"
+    opacity 0.95
+    open-maximized true
+}
+
+window-rule {
+    match app-id="vesktop"
+    opacity 0.95
+}
+
 //Browser
 window-rule {
     match app-id="brave-browser" 
@@ -191,8 +202,8 @@ window-rule {
 window-rule {
     match app-id="mpv"
     open-floating true
-    default-column-width { fixed 1000; }
-    default-window-height { fixed 600; }
+    default-column-width { fixed 1400; }
+    default-window-height { fixed 800; }
 }
 
 //===================================
