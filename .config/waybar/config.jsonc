@@ -9,6 +9,7 @@
     ],
 
     "modules-right": [
+        "custom/theme",
         "power-profiles-daemon",
         "battery", 
         "pulseaudio"
@@ -112,6 +113,12 @@
     "balanced": "",
     "power-saver": ""
   }
+},
+
+"custom/theme": {
+    "format": "󱙻",
+    "on-click": "niri msg action spawn -- /home/moreki/dotfiles/scripts/toggle-theme.sh",
+    "tooltip": false
 }
 
 }

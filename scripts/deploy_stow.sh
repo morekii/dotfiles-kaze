@@ -21,7 +21,6 @@ APPS=(
     "zsh"
     "nvim"
     "fuzzel"
-    "wlsunset"
     "nwg-look"
     "hypr"
     "tmux"

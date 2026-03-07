@@ -16,7 +16,7 @@ spawn-at-startup "nm-applet" "--indicator"
 spawn-at-startup "blueman-applet"
 spawn-at-startup "dbus-update-activation-environment" "--all"
 spawn-at-startup "swaync"
-spawn-at-startup "swaybg" "-m" "fill" "-i" "/home/moreki/Pictures/Wallpapers/Anime/wallhaven-1q19l1.png"
+spawn-at-startup "/home/moreki/dotfiles/scripts/wallpaper-init.sh" 
 spawn-at-startup "swayidle" "-w" \
     "timeout" "300" "hyprlock" \
     "timeout" "310" "niri msg action power-off-monitors" \
