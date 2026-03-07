@@ -126,6 +126,16 @@ layout {
         proportion 0.33333
         proportion 0.5
         proportion 0.66667
+        proportion 0.8
+        proportion 1.0
+    }
+
+    preset-window-heights {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+        proportion 0.8
+        proportion 1.0
     }
 }
 
@@ -163,12 +173,12 @@ layer-rule {
 window-rule {
     geometry-corner-radius 4
     clip-to-geometry true
-        
+    default-column-width { fixed 1400; }
 }
 
 window-rule {
     match app-id="kitty"
-    open-floating true
+    open-floating false
     default-window-height { fixed 600; }
     default-column-width { fixed 1000; }
     opacity 1.0
@@ -200,6 +210,12 @@ window-rule {
     default-window-height { fixed 800; }
 }
 
+window-rule {
+    match app-id="spotify"
+    match title="^Spotify.*$"
+    opacity 0.95
+}
+
 //===================================
 //=             BINDS               =
 //===================================
@@ -216,7 +232,7 @@ binds {
     Mod+Space { spawn "fuzzel"; }
     Mod+D { spawn "dolphin"; }
     Mod+B { spawn "brave-browser"; }
-    Mod+N { spawn "VSCodium"; }
+    Mod+N { spawn "codium"; }
 
     Super+Alt+L { spawn "sh" "-c" "hyprlock & sleep 10 && niri msg action power-off-monitors"; }
 

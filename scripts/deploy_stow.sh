@@ -26,6 +26,7 @@ APPS=(
     "hypr"
     "tmux"
     "VSCodium"
+    "cava"
 )
 
 echo "🛠️  Sincronizando Kaze desde dotfiles..."
