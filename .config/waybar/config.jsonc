@@ -1,13 +1,11 @@
 {
     "layer": "top",
     "modules-left": [
-        "niri/workspaces",
-        "niri/window" 
+        "niri/workspaces"
     ],
     
     "modules-center": [
-        "clock",
-        "cava"
+        "clock"
     ],
 
     "modules-right": [
