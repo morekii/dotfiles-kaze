@@ -103,5 +103,6 @@ window#waybar {
     transition: color .5s;
 }
 #custom-arch:hover {
+ 
     color: #1793d1;
 }
