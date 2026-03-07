@@ -138,3 +138,5 @@ export PATH="$HOME/dotfiles/.config:$PATH"
 # Usalo cuando se te trabe el menú de ani-cli
 alias ani='ani-cli'
 alias code='codium'
+
+alias wall='pkill swaybg; swaybg -m fill -i'

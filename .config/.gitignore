@@ -1,0 +1,4 @@
+.config/zsh/.zcompdump*
+
+.config/cava/shaders/
+.config/cava/themes/
