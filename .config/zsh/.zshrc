@@ -140,3 +140,7 @@ alias ani='ani-cli'
 alias code='codium'
 
 alias wall='pkill swaybg; swaybg -m fill -i'
+
+export PATH="$HOME/dotfiles/scripts:$PATH"
+
+eval "$(starship init zsh)"

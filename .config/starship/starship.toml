@@ -1,0 +1,60 @@
+# ~/.config/starship.toml
+add_newline = false
+
+# Usamos la paleta personalizada que definimos abajo
+palette = "kitty_colors"
+
+format = """
+[](fg:blue_cyan)\
+$os\
+$directory\
+[](fg:blue_cyan bg:blue_git)\
+$git_branch\
+$git_status\
+[](fg:blue_git bg:blue_sharp)\
+$c_sharp\
+[](fg:blue_sharp bg:color8)\
+$time\
+[ ](fg:color8)\
+\n$character"""
+
+[palettes.kitty_colors]
+# Mapeamos tus colores de la terminal a nombres que Starship entienda
+blue_cyan = "4"   # Tu color4 (Cyan)
+blue_git  = "6"   # Tu color6 (Azul/Cyan oscuro)
+blue_sharp = "12" # Tu color12 (Azul intenso)
+color8 = "8"      # Tu gris de fondo para la hora
+
+[os]
+disabled = false
+style = "bg:blue_cyan fg:0"
+symbols.openSUSE = " "
+
+[directory]
+style = "bg:blue_cyan fg:0"
+format = "[ $path ]($style)"
+truncation_length = 3
+
+[git_branch]
+symbol = "󰊢 "
+style = "bg:blue_git fg:0"
+format = "[ $symbol$branch ]($style)"
+
+[git_status]
+style = "bg:blue_git fg:0"
+format = "[[($all_status$ahead_behind )]($style)]($style)"
+
+[c_sharp]
+symbol = "󰓚 "
+style = "bg:blue_sharp fg:0"
+format = "[ $symbol($version) ]($style)"
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:color8 fg:7"
+format = "[ 󱑂 $time ]($style)"
+
+[character]
+success_symbol = "[❯](bold blue_cyan)"
+error_symbol = "[❯](bold 1)"
