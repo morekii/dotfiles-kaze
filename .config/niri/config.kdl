@@ -216,6 +216,15 @@ window-rule {
     opacity 0.95
 }
 
+window-rule {
+    match app-id="pavucontrol"
+    open-floating true    
+    default-column-width { proportion 0.3; }
+    default-window-height { proportion 0.4; }
+    geometry-corner-radius 10
+    clip-to-geometry true
+}
+
 //===================================
 //=             BINDS               =
 //===================================
