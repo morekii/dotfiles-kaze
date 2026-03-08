@@ -225,6 +225,15 @@ window-rule {
     clip-to-geometry true
 }
 
+window-rule {
+    match app-id="nm-connection-editor"
+    open-floating true    
+    default-column-width { proportion 0.3; }
+    default-window-height { proportion 0.4; }
+    geometry-corner-radius 10
+    clip-to-geometry true
+}
+
 //===================================
 //=             BINDS               =
 //===================================

@@ -10,10 +10,10 @@
 
     "modules-right": [
         "custom/theme",
-        "power-profiles-daemon",
+        "pulseaudio",
         "network",
-        "battery", 
-        "pulseaudio"
+        "battery",
+        "power-profiles-daemon"
     ],
 
     "battery": {
@@ -58,7 +58,7 @@
     "tooltip-format-ethernet": "{ifname} ",
     "tooltip-format-disconnected": "Disconnected",
     "max-length": 50,
-    "on-click": "nm-applet"
+    "on-click": "nm-connection-editor"
 }, 
 
 "custom/cava": {
@@ -100,7 +100,7 @@
 },
 
 "custom/theme": {
-    "format": "󱙻",
+    "format": "󰄯",
     "on-click": "niri msg action spawn -- /home/moreki/dotfiles/scripts/toggle-theme.sh",
     "tooltip": false
 }
