@@ -12,7 +12,6 @@ $directory\
 $git_branch\
 $git_status\
 [](fg:blue_git bg:blue_sharp)\
-$c_sharp\
 [](fg:blue_sharp bg:color8)\
 $time\
 [ ](fg:color8)\
@@ -43,11 +42,6 @@ format = "[ $symbol$branch ]($style)"
 [git_status]
 style = "bg:blue_git fg:0"
 format = "[[($all_status$ahead_behind )]($style)]($style)"
-
-[c_sharp]
-symbol = "󰓚 "
-style = "bg:blue_sharp fg:0"
-format = "[ $symbol($version) ]($style)"
 
 [time]
 disabled = false
