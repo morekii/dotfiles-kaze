@@ -144,3 +144,5 @@ alias wall='pkill swaybg; swaybg -m fill -i'
 export PATH="$HOME/dotfiles/scripts:$PATH"
 
 eval "$(starship init zsh)"
+
+export PATH=$NODE_HOME/bin:$HOME/.npm-global/bin:$PATH

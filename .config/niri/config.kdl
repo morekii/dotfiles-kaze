@@ -180,7 +180,7 @@ window-rule {
     match app-id="kitty"
     open-floating false
     default-window-height { fixed 600; }
-    default-column-width { fixed 1000; }
+    default-column-width { proportion 0.5; }
     opacity 1.0
     draw-border-with-background false
     border {on;}
