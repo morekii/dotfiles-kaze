@@ -20,7 +20,7 @@ if [[ "$CURRENT" == *"dark"* ]]; then
     ln -sf "$DOT_KITTY/colors-light.conf" "$SYS_KITTY/colors.conf"
     
     # Transición de fondo fluida: Lanzamos y luego matamos el viejo
-    swaybg -i /home/moreki/Pictures/Wallpapers/Anime/wallhaven-e83jg8.jpg -m fill &
+    swaybg -i /home/moreki/Pictures/Wallpapers/Japan/wallhaven-9o2opd.jpg -m fill &
     sleep 0.8
     pkill -o swaybg # Mata la instancia más vieja
     
@@ -44,3 +44,9 @@ pkill -USR1 kitty
 if pgrep kitty > /dev/null; then
     kitty @ set-colors -a -c "$SYS_KITTY/colors.conf"
 fi
+
+#fallen angel: /home/moreki/Pictures/Wallpapers/Aesthethic/wallhaven-8g5w52.png
+#nasa girl: /home/moreki/Pictures/Wallpapers/Anime/wallhaven-1q19l1.png
+#eye girl: /home/moreki/Pictures/Wallpapers/Anime/wallhaven-e83jg8.jpg
+#car store: /home/moreki/Pictures/Wallpapers/Japan/wallhaven-lyzly2.jpg
+#cliff car: /home/moreki/Pictures/Wallpapers/Japan/wallhaven-9o2opd.jpg
