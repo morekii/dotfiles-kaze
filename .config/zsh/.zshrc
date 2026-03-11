@@ -145,4 +145,5 @@ export PATH="$HOME/dotfiles/scripts:$PATH"
 
 eval "$(starship init zsh)"
 
-export PATH=$NODE_HOME/bin:$HOME/.npm-global/bin:$PATH
+export PATH=~/.npm-global/bin:$PATH
+export NODE_OPTIONS="--dns-result-order=ipv4first"
