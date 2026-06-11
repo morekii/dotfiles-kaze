@@ -102,3 +102,24 @@ window#waybar {
   color: #2e3440;
   box-shadow: none;
 }
+
+#window {
+    padding: 0 10px;
+    color: #3d4452;
+    font-style: italic;
+}
+
+#custom-notification {
+    padding: 0 10px;
+    border-radius: 15px;
+}
+#custom-notification.notification {
+    color: #2d7edb;
+}
+
+#battery.warning {
+    color: #c07a00;
+}
+#battery.critical {
+    color: #c0392b;
+}

@@ -95,3 +95,24 @@ window#waybar {
   color: #cdd6f4;
   box-shadow: none;
 }
+
+#window {
+    padding: 0 10px;
+    color: #a9b1d6;
+    font-style: italic;
+}
+
+#custom-notification {
+    padding: 0 10px;
+    border-radius: 15px;
+}
+#custom-notification.notification {
+    color: #bb9af7;
+}
+
+#battery.warning {
+    color: #ff9e64;
+}
+#battery.critical {
+    color: #f7768e;
+}
