@@ -48,4 +48,17 @@ for APP in "${APPS[@]}"; do
     fi
 done
 
+# Inicializar archivos de tema activo como symlinks (dark por defecto)
+# Estos archivos son manejados por toggle-theme.sh y no están en git
+init_theme_file() {
+    local file="$1" default="$2"
+    if [ ! -L "$file" ]; then
+        ln -sf "$default" "$file"
+        echo "🎨 Inicializado $(basename "$file") -> $(basename "$default")"
+    fi
+}
+init_theme_file "$DOTFILES_DIR/.config/waybar/style.css"   "$DOTFILES_DIR/.config/waybar/style-dark.css"
+init_theme_file "$DOTFILES_DIR/.config/fuzzel/fuzzel.ini"  "$DOTFILES_DIR/.config/fuzzel/fuzzel-dark.ini"
+init_theme_file "$DOTFILES_DIR/.config/kitty/colors.conf"  "$DOTFILES_DIR/.config/kitty/colors-dark.conf"
+
 echo "✅ ¡Kaze sincronizada y lista!"

@@ -1,4 +1,3 @@
-
 //===================================
 //=           MISC                  =
 //===================================
@@ -14,15 +13,17 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 spawn-at-startup "waybar"
 spawn-at-startup "nm-applet" "--indicator"
 spawn-at-startup "blueman-applet"
-spawn-at-startup "dbus-update-activation-environment" "--all"
+spawn-at-startup "sh" "-c" "sleep 2 && dbus-update-activation-environment --systemd DISPLAY=:1 WAYLAND_DISPLAY"
+spawn-at-startup "systemctl" "--user" "restart" "xdg-desktop-portal"
 spawn-at-startup "swaync"
-spawn-at-startup "/home/moreki/dotfiles/scripts/wallpaper-init.sh" 
+spawn-at-startup "/home/moreki/dotfiles/scripts/wallpaper-init.sh"
 spawn-at-startup "swayidle" "-w" \
-    "timeout" "600" "hyprlock" \
+    "timeout" "600" "pgrep -x hyprlock || hyprlock" \
     "timeout" "610" "niri msg action power-off-monitors" \
     "resume" "niri msg action power-on-monitors" \
-    "before-sleep" "hyprlock"
-spawn-at-startup "dbus-update-activation-environment" "--systemd" "DISPLAY" "WAYLAND_DISPLAY" "XDG_CURRENT_DESKTOP"
+    "before-sleep" "pgrep -x hyprlock || hyprlock"
+spawn-at-startup "xwayland-satellite"
+
 
 environment {
     XDG_CURRENT_DESKTOP "niri"
@@ -31,7 +32,10 @@ environment {
     XCURSOR_THEME "Adwaita"
     XCURSOR_SIZE "16"
     GDK_BACKEND "wayland"
+    DISPLAY ":1"
 }
+
+
 
 //===================================
 //=           INPUT                 =
@@ -107,11 +111,7 @@ layout {
 
 
     border {
-	off
-
-    width 1
-    active-color "#ffffffcc"
-    inactive-color "#ffffffcc"    
+        off
     }
     
     shadow {
@@ -267,7 +267,7 @@ binds {
     Mod+B { spawn "brave-browser"; }
     Mod+N { spawn "codium"; }
 
-    Super+Alt+L { spawn "sh" "-c" "hyprlock & sleep 10 && niri msg action power-off-monitors"; }
+    Super+Alt+L { spawn "sh" "-c" "/home/moreki/dotfiles/scripts/lock.sh"; }
 
     // Navegación y Ventanas
     Mod+Tab repeat=false { toggle-overview; }

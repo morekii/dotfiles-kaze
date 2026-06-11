@@ -102,16 +102,3 @@ window#waybar {
   color: #2e3440;
   box-shadow: none;
 }
-
-#custom-arch {
-    margin-left: 5px;
-    padding: 0 10px;
-    font-size: 25px;
-    transition: color .5s;
-    /* Un azul un poco más oscuro para modo claro */
-    color: #2d7edb;
-}
-
-#custom-arch:hover {
-    color: #1793d1;
-}

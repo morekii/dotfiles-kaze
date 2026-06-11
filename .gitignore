@@ -2,3 +2,8 @@
 
 .config/cava/shaders/
 .config/cava/themes/
+
+# Archivos de tema activo — manejados por toggle-theme.sh, no trackear
+.config/waybar/style.css
+.config/fuzzel/fuzzel.ini
+.config/kitty/colors.conf
