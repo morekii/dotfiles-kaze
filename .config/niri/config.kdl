@@ -22,6 +22,7 @@ spawn-at-startup "swayidle" "-w" \
     "timeout" "610" "niri msg action power-off-monitors" \
     "resume" "niri msg action power-on-monitors" \
     "before-sleep" "hyprlock"
+spawn-at-startup "dbus-update-activation-environment" "--systemd" "DISPLAY" "WAYLAND_DISPLAY" "XDG_CURRENT_DESKTOP"
 
 environment {
     XDG_CURRENT_DESKTOP "niri"
